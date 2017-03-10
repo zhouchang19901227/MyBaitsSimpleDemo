@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mybatis.test.IMobileOperation">
+
+    <resultMap type="Mobile" id="mobileResultMap">
+        <result property="mobile_eq_no" column="mobile_eq_no"  />
+        <result property="sim" column="sim"  />
+        <result property="org_id" column="org_id"  />
+    </resultMap>
+    
+
+    <select id="selectMobleByID" parameterType="int" resultMap="mobileResultMap">
+        select * from mobile where id = #{id}
+	</select>
+    
+</mapper>
